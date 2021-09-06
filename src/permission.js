@@ -1,3 +1,10 @@
+/*
+ * @Descripttion: 
+ * @Author: shenqiang
+ * @Date: 2021-09-03 16:42:49
+ * @LastEditors: shenqiang
+ * @LastEditTime: 2021-09-06 14:00:35
+ */
 import router from './router'
 import store from './store'
 import storage from 'store'
@@ -32,12 +39,15 @@ router.beforeEach((to, from, next) => {
             const roles = res.result && res.result.role
             // generate dynamic router
             store.dispatch('GenerateRoutes', { roles }).then(() => {
+              console.log('生产路由',roles)
+              console.log(store.getters.addRouters)
               // 根据roles权限生成可访问的路由表
               // 动态添加可访问路由表
               // VueRouter@3.5.0+ New API
               store.getters.addRouters.forEach(r => {
                 router.addRoute(r)
               })
+              console.log(router)
               // 请求带有 redirect 重定向时，登录自动重定向到该地址
               const redirect = decodeURIComponent(from.query.redirect || to.path)
               if (to.path === redirect) {

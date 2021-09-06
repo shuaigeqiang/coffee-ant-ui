@@ -467,6 +467,43 @@ const info = options => {
 
 const userNav = options => {
   const nav = [
+    // 新增：所有组件（用于调试开发组件）
+    {
+      name: 'allcomps',
+      parentId: 0,
+      id: 20,
+      meta: {
+        // icon: 'dashboard',
+        title: '组件调试',
+        show: true
+      },
+      component: 'RouteView',
+      redirect: '/allcomps/compBoard'
+    },
+    {
+      name: 'compBoard',
+      parentId: 20,
+      meta: {
+        // icon: 'dashboard',
+        title: '组件列表',
+        show: true
+      },
+      component: 'CompBoard',
+
+    },
+    {
+      name: 'compPreview',
+      parentId: 20,
+      meta: {
+        // icon: 'dashboard',
+        title: '组件预览',
+        show: true
+      },
+      component: 'CompPreview',
+
+    },
+
+
     // dashboard
     {
       name: 'dashboard',
@@ -480,6 +517,7 @@ const userNav = options => {
       component: 'RouteView',
       redirect: '/dashboard/workplace'
     },
+
     {
       name: 'workplace',
       parentId: 1,
