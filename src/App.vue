@@ -3,7 +3,7 @@
  * @Author: shenqiang
  * @Date: 2021-09-03 16:42:49
  * @LastEditors: shenqiang
- * @LastEditTime: 2021-09-08 10:51:17
+ * @LastEditTime: 2021-09-08 11:03:22
 -->
 <template>
   <a-config-provider :locale="locale">
@@ -22,17 +22,18 @@ export default {
   data() {
     return {}
   },
+  
   components: {
     // testVue
   },
   computed: {
-    locale () {
+    locale() {
       // 只是为了切换语言时，更新标题
       const { title } = this.$route.meta
       title && setDocumentTitle(`${i18nRender(title)} - ${domTitle}`)
 
       return this.$i18n.getLocaleMessage(this.$store.getters.lang).antLocale
-    }
-  }
+    },
+  },
 }
 </script>
