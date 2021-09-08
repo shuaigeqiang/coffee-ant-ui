@@ -3,7 +3,7 @@
  * @Author: shenqiang
  * @Date: 2021-09-03 16:42:49
  * @LastEditors: shenqiang
- * @LastEditTime: 2021-09-06 11:28:01
+ * @LastEditTime: 2021-09-08 10:51:17
 -->
 <template>
   <a-config-provider :locale="locale">
@@ -19,7 +19,7 @@ import { domTitle, setDocumentTitle } from '@/utils/domUtil'
 import { i18nRender } from '@/locales'
 // import testVue from 'module-test-sq'
 export default {
-  data () {
+  data() {
     return {}
   },
   components: {
