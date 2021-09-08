@@ -3,7 +3,7 @@
  * @Author: shenqiang
  * @Date: 2021-09-03 16:42:49
  * @LastEditors: shenqiang
- * @LastEditTime: 2021-09-08 11:08:03
+ * @LastEditTime: 2021-09-08 11:09:20
 -->
 <template>
   <a-config-provider :locale="locale">
@@ -22,6 +22,8 @@ export default {
   data() {
     return {}
   },
+  
+
   
   
   

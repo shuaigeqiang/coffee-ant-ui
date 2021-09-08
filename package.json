@@ -16,8 +16,8 @@
     }
   },
   "lint-staged": {
-    "*.js": "eslint --fix",
-    "*.vue": "eslint --fix"
+    "*.js": "vue-cli-service lint",
+    "*.vue": "vue-cli-service lint"
   },
   "dependencies": {
     "@ant-design-vue/pro-layout": "^1.0.8",
